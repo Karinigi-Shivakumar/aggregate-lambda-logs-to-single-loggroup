@@ -27,11 +27,3 @@ functions:
             - http:
                   path: s3_to_loggroup
                   method: post
-
-    controlTower:
-        handler: registerOU.handler
-        # role: ${env:LAMBDA_ROLE}
-        events:
-            - http:
-                  path: cont
-                  method: post
