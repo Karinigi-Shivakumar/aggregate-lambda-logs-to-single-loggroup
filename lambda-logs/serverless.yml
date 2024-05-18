@@ -1,0 +1,37 @@
+service: lambda-logs
+
+plugins:
+    - serverless-offline
+
+frameworkVersion: "3"
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+    region: us-east-1
+    timeout: 30
+
+functions:
+    lambdaLogsToS3:
+        handler: lambdaLogsToS3.handler
+        # role: ${env:LAMBDA_ROLE}
+        events:
+            - http:
+                  path: lambda_logs_to_s3
+                  method: post
+
+    s3ToCommonLogGroup:
+        handler: s3ToCommonLogGroup.handler
+        # role: ${env:LAMBDA_ROLE}
+        events:
+            - http:
+                  path: s3_to_loggroup
+                  method: post
+
+    controlTower:
+        handler: registerOU.handler
+        # role: ${env:LAMBDA_ROLE}
+        events:
+            - http:
+                  path: cont
+                  method: post

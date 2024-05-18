@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.1.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.568.0",
+    "@aws-sdk/client-cloudwatch-logs-node": "^0.1.0-preview.2",
+    "@aws-sdk/client-controltower": "^3.577.0",
+    "@aws-sdk/client-lambda": "^3.568.0",
+    "@aws-sdk/client-organizations": "^3.577.0",
+    "@aws-sdk/client-s3": "^3.569.0",
+    "crypto": "^1.0.1",
+    "serverless-offline": "^13.5.0",
+    "zlib": "^1.0.5"
+  }
+}
